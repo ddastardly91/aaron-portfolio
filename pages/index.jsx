@@ -1,7 +1,9 @@
 import Post from "@/components/Post";
 
 function Home({ posts }) {
-  return (
+  return !posts ? (
+    <div>Loading...</div>
+  ) : (
     <>
       {posts.data.map((post) => {
         return <Post post={post} key={post._id} />;
