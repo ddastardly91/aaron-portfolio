@@ -43,7 +43,7 @@ function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="p-6 bg-neutral">
+            <div className="p-6 bg-neutral text-white">
                 <p className="mb-4">
                     Aspiring Full-stack web developer from Preston, Lancashire!
                     🚀
