@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.14.0",
     "bcryptjs": "^2.4.3",
     "daisyui": "^2.51.5",
     "jsonwebtoken": "^9.0.0",
