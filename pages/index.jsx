@@ -13,13 +13,15 @@ function Home({ posts }) {
 }
 
 export async function getServerSideProps(context) {
-  const hostname = context.req.headers.host;
-  let res = await fetch("http://" + hostname + "/api/posts", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  let res = await fetch(
+    "https://aaron-portfolio-ddastardly91.vercel.app/api/posts",
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
   let posts = await res.json();
 
   return {
