@@ -5,7 +5,7 @@ import Footer from "./Footer";
 function Layout({ children }) {
   return (
     <div data-theme="dark">
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="max-w-3xl mx-auto">
         <Hero />
         {children}
