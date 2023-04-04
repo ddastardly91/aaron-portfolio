@@ -21,7 +21,7 @@ function Hero() {
                 </div>
             </div>
             <div className="px-6 bg-neutral">
-                <h1 className="text-4xl text-white font-bold mb-3">
+                <h1 className="text-4xl text-white font-bold mb-3 pt-4">
                     Aaron Latham
                 </h1>
                 <div className="flex gap-2 flex-wrap">
