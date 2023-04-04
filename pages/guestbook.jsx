@@ -24,6 +24,7 @@ function Guestbook() {
         e.preventDefault();
 
         createGuestbookMessage(guestbookMessage);
+        setToggleSignGuestbook(false);
     };
 
     useEffect(() => {
