@@ -13,7 +13,7 @@ function Home({ posts }) {
 }
 
 export async function getServerSideProps(context) {
-  let res = await fetch(path.join(process.cwd(), "/api/posts"), {
+  let res = await fetch(`${__dirname}/api/posts`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
