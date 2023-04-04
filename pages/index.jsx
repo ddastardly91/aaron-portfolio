@@ -13,7 +13,8 @@ function Home({ posts }) {
 }
 
 export async function getServerSideProps(context) {
-  let res = await fetch(`${__dirname}/api/posts`, {
+  const hostname = context.req.headers.host;
+  let res = await fetch("http://" + hostname + "/api/posts", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
