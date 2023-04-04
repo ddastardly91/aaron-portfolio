@@ -15,7 +15,7 @@ function Hero() {
         </div>
         <div className="absolute top-72 bottom-0 h-auto w-full bg-neutral pt-20 px-6 text-white">
           <h1 className="text-4xl font-bold mb-2">Aaron Latham</h1>
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <div className="badge text-white bg-orange-500 p-3">HTML</div>
             <div className="badge text-white bg-blue-500 p-3">CSS</div>
             <div className="badge text-white bg-yellow-500 p-3">Javascript</div>
@@ -24,14 +24,16 @@ function Hero() {
             <div className="badge text-white bg-green-600 p-3">MongoDB</div>
           </div>
           <div className="divider"></div>
-          <p className="mb-2">
-            Aspiring Full-stack web developer from Preston, Lancashire! 🚀
-          </p>
-          <p>
-            On the self-teaching journey in the world of web development,
-            currently learning to build REST API's using Express.js with MongoDB
-            as the database.
-          </p>
+          <div>
+            <p className="mb-2">
+              Aspiring Full-stack web developer from Preston, Lancashire! 🚀
+            </p>
+            <p>
+              On the self-teaching journey in the world of web development,
+              currently learning to build REST API's using Express.js with
+              MongoDB as the database.
+            </p>
+          </div>
         </div>
       </div>
       <div className="h-16 bg-neutral">
