@@ -11,7 +11,7 @@ function Home({ posts }) {
 }
 
 export async function getServerSideProps(context) {
-  let res = await fetch("https://aaron-latham.vercel.app/api/posts", {
+  let res = await fetch("/api/posts", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
