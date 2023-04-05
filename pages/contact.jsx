@@ -19,7 +19,7 @@ function Contact() {
                 "service_cipznhj",
                 "template_kdpofdo",
                 contactMessage,
-                "_ccEc67VMi98GezBW"
+                process.env.NEXT_PUBLIC_EMAILJS_KEY
             )
             .then(
                 function (response) {
