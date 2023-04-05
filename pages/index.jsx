@@ -119,7 +119,7 @@ function Home() {
             ) : (
                 <div>
                     {posts.map((post) => {
-                        return <Post post={post} key={post.id} />;
+                        return <Post post={post} key={post.post_id} />;
                     })}
                 </div>
             )}
