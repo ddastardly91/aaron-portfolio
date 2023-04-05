@@ -8,14 +8,26 @@ function Home() {
     const { user } = authContext;
 
     const postContext = useContext(PostContext);
-    const { getPosts, posts } = postContext;
+    const { getPosts, posts, createPost, errorMessage } = postContext;
 
     const [toggleCreatePost, setToggleCreatePost] = useState(true);
+
+    const [newPost, setNewPost] = useState({
+        author: "Dastardly",
+        title: "",
+        tag: "",
+        content: "",
+    });
 
     useEffect(() => {
         getPosts();
     }, []);
 
+    const handleNewPost = (e) => {
+        e.preventDefault();
+
+        createPost(newPost);
+    };
     return (
         <>
             {user && (
@@ -30,7 +42,10 @@ function Home() {
             )}
             {toggleCreatePost && user && (
                 <div className="bg-neutral p-6">
-                    <form className="form-control w-full flex flex-col gap-3">
+                    <form
+                        className="form-control w-full flex flex-col gap-3"
+                        onSubmit={handleNewPost}
+                    >
                         <div>
                             <label className="label">
                                 <span className="label-text">Title:</span>
@@ -82,6 +97,12 @@ function Home() {
                                 ></textarea>
                             </div>
                         </div>
+
+                        {errorMessage && (
+                            <span className="font-bold text-red-500">
+                                {errorMessage}
+                            </span>
+                        )}
 
                         <div className="mt-3">
                             <button className="btn btn-secondary w-full">

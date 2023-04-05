@@ -30,6 +30,19 @@ const PostProvider = ({ children }) => {
         setPosts(posts);
     };
 
+    const createPost = async (postData) => {
+        setLoading(true);
+
+        const { data, error } = await supabase.from("posts").insert([postData]);
+
+        if (error) {
+            return setErrorMessage(error.message);
+        }
+
+        setLoading(false);
+        getPosts();
+    };
+
     const getGuestbookMessages = async () => {
         setLoading(true);
 
@@ -74,6 +87,7 @@ const PostProvider = ({ children }) => {
             value={{
                 posts,
                 getPosts,
+                createPost,
                 loading,
                 errorMessage,
                 guestbookMessages,

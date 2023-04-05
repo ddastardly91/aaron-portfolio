@@ -27,7 +27,9 @@ function Post({ post }) {
                     </div>
                 </div>
                 <div>
-                    <h1 className="text-3xl text-zinc-100">{post.title}</h1>
+                    <h1 className="text-3xl text-zinc-100 mb-3">
+                        {post.title}
+                    </h1>
                     <p>{post.content}</p>
                 </div>
                 <div className="divider mb-0"></div>
