@@ -44,8 +44,7 @@ function Hero() {
             </div>
             <div className="p-6 bg-neutral text-white">
                 <p className="mb-4">
-                    Aspiring Full-stack web developer from Preston, Lancashire!
-                    🚀
+                    Full-stack web developer from Lancashire, United Kingdom! 🚀
                 </p>
                 <p>
                     On the self-teaching journey in the world of web
