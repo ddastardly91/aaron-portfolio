@@ -6,7 +6,7 @@ function Chatbubble({ message }) {
         <div className="flex flex-col overflow-x-hidden">
             {message.id % 2 === 0 ? (
                 <div>
-                    <div className="chat chat-start">
+                    <div className="chat chat-start flex items-center">
                         <div
                             className="chat-image avatar tooltip tooltip-left tooltip-info"
                             data-tip={message.name}
@@ -29,7 +29,7 @@ function Chatbubble({ message }) {
                 </div>
             ) : (
                 <div>
-                    <div className="chat chat-end">
+                    <div className="chat chat-end flex flex-row-reverse items-center">
                         <div
                             className="chat-image avatar tooltip tooltip-right tooltip-info"
                             data-tip={message.name}
