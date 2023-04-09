@@ -10,8 +10,8 @@ function Hero() {
                         Follow
                     </button>
                 </div>
-                <div className="avatar online pl-7 top-[-80px]">
-                    <div className="w-40 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <div className="avatar pl-7 top-[-100px]">
+                    <div className="w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img
                             src="https://jzydiualnzioeivokfwp.supabase.co/storage/v1/object/public/avatar/avatar.png"
                             alt="avatar"
@@ -20,7 +20,7 @@ function Hero() {
                 </div>
             </div>
             <div className="px-6 bg-neutral">
-                <h1 className="text-4xl text-white font-bold mb-3 pt-4">
+                <h1 className="text-5xl text-white font-bold mb-3 pt-6">
                     Dastardly
                 </h1>
                 <div className="flex gap-2 flex-wrap">
