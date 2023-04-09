@@ -3,9 +3,9 @@ import Link from "next/link";
 
 function Chatbubble({ message }) {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col overflow-x-hidden">
             {message.id % 2 === 0 ? (
-                <>
+                <div>
                     <div className="chat chat-start">
                         <div
                             className="chat-image avatar tooltip tooltip-left tooltip-info"
@@ -26,9 +26,9 @@ function Chatbubble({ message }) {
                         &bull;{" "}
                         {new Date(message.created_at).toLocaleTimeString()}
                     </span>
-                </>
+                </div>
             ) : (
-                <>
+                <div>
                     <div className="chat chat-end">
                         <div
                             className="chat-image avatar tooltip tooltip-right tooltip-info"
@@ -50,7 +50,7 @@ function Chatbubble({ message }) {
                         &bull;{" "}
                         {new Date(message.created_at).toLocaleTimeString()}
                     </span>
-                </>
+                </div>
             )}
         </div>
     );

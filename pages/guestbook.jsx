@@ -133,13 +133,13 @@ function Guestbook() {
                     No messages 😭, why not be the first?
                 </div>
             ) : (
-                <div>
+                <>
                     {guestbookMessages.map((message) => {
                         return (
                             <Chatbubble message={message} key={message.id} />
                         );
                     })}
-                </div>
+                </>
             )}
         </div>
     );
