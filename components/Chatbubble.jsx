@@ -6,11 +6,9 @@ function Chatbubble({ message }) {
         <div className="flex flex-col overflow-x-hidden">
             {message.id % 2 === 0 ? (
                 <div>
+                    <span className="font-semibold">{message.name}</span>
                     <div className="chat chat-start flex items-center">
-                        <div
-                            className="chat-image avatar tooltip tooltip-left tooltip-info"
-                            data-tip={message.name}
-                        >
+                        <div className="chat-image avatar tooltip tooltip-left tooltip-info">
                             <div className="w-14 rounded-full">
                                 <Link href={message.websiteURL} target="_blank">
                                     <img src={message.avatarURL} alt="avatar" />
@@ -28,12 +26,12 @@ function Chatbubble({ message }) {
                     </span>
                 </div>
             ) : (
-                <div>
+                <div className="flex flex-col">
+                    <span className="font-semibold text-right">
+                        {message.name}
+                    </span>
                     <div className="chat chat-end flex flex-row-reverse items-center">
-                        <div
-                            className="chat-image avatar tooltip tooltip-right tooltip-info"
-                            data-tip={message.name}
-                        >
+                        <div className="chat-image avatar tooltip tooltip-right tooltip-info">
                             <div className="w-14 rounded-full">
                                 <Link href={message.websiteURL} target="_blank">
                                     <img src={message.avatarURL} alt="avatar" />
