@@ -14,9 +14,10 @@ function Guestbook() {
     const [toggleSignGuestbook, setToggleSignGuestbook] = useState(false);
 
     const [guestbookMessage, setGuestbookMessage] = useState({
-        avatarURL: "",
+        avatarURL:
+            "https://img.freepik.com/premium-vector/smiley-chimp-illustration_56972-163.jpg",
         name: "",
-        websiteURL: "",
+        websiteURL: "dastardly.vercel.app",
         message: "",
     });
 

@@ -13,11 +13,11 @@ function PageNav() {
                     Posts
                 </Link>
                 <Link
-                    href="/about"
+                    href="/projects"
                     scroll={false}
                     className="flex items-center justify-center w-full h-full text-center hover:bg-slate-800 cursor-pointer hover:text-secondary"
                 >
-                    About
+                    Projects
                 </Link>
                 <Link
                     href="/guestbook"

@@ -66,7 +66,7 @@ const PostProvider = ({ children }) => {
     const createGuestbookMessage = async (credentials) => {
         const { name, avatarURL, websiteURL, message } = credentials;
 
-        const { data, error } = await supabase.from("guestbook").insert([
+        const { error } = await supabase.from("guestbook").insert([
             {
                 name,
                 avatarURL,
@@ -77,6 +77,14 @@ const PostProvider = ({ children }) => {
 
         if (error) {
             return console.log(error.message, "createGuestbookMessage error");
+        }
+
+        if (!name) {
+            return setErrorMessage("Name field cannot be empty.");
+        }
+
+        if (!message) {
+            return setErrorMessage("Message field cannot be empty.");
         }
 
         getGuestbookMessages();
